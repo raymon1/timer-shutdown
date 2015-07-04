@@ -52,7 +52,7 @@ void MainWindow::update()
         s = QString::number(time_seconds/3600);
         s+=":";
         s += QString::number((time_seconds%3600)/60);
-        //time_seconds %=60;
+       
         s+=":";
         s += QString::number((time_seconds%3600)%60);
         ui->l_t->setText(s);
@@ -60,10 +60,7 @@ void MainWindow::update()
         if(time_seconds==0 && running)
              system("c:\\windows\\system32\\shutdown /s /t 2 \n\n");
 
-            //ui->label->setText("laaaaaalalala");
-
-               // system("c:\\windows\\system32\\shutdown /s /t 2 \n\n");
-
+            
         time_seconds--;
     }
 }
